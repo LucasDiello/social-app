@@ -6,7 +6,7 @@ function Header({toggleSideBar}) {
   return (
     <div className='p-5 flex justify-between md:justify-end shadow-sm bg-white items-center'>
         <Menu className='md:hidden h-7 w-7
-         text-slate-500 cursor-pointer'
+         text-slate-500 cursor-pointer relative z-50'
          onClick={()=>toggleSideBar()}
          />
         <Button className='bg-blue-500 

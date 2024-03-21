@@ -4,7 +4,7 @@ import SideNav from './_components/SideNav'
 import Header from './_components/Header'
 
 function layout({ children }) {
-  const [toggleSideBar, setToggleSideBar] = useState(true)
+  const [toggleSideBar, setToggleSideBar] = useState(false)
   return (
     <div>
 
@@ -22,7 +22,9 @@ function layout({ children }) {
         
       <div className='md:ml-64'>
         {/* Header  */}
-        <Header toggleSideBar={() => setToggleSideBar(true)} />
+        <Header toggleSideBar={() => setToggleSideBar(
+          toggleSideBar ? false : true
+        )} />
         <div className='grid grid-cols-1 md:grid-cols-3'>
           {/* user used render page route  */}
           <div className='md:col-span-2'>
